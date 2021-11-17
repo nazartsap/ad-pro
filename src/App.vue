@@ -39,11 +39,11 @@
        :key="link.title" 
        text><v-icon left>{{ link.icon }}</v-icon>{{ link.title }}</v-btn> 
     </v-toolbar-items>
-  </v-app-bar>
+</v-app-bar>
   <v-main>
     <!--<router-view></router-view>--> 
   </v-main>
-  </v-app>
+  </v-app>	
 </template>
 
 <script>
@@ -61,5 +61,4 @@ export default {
     }
   }
 }
-
 </script>
