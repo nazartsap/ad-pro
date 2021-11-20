@@ -1,4 +1,4 @@
-import Vue from 'vue'
+
 import Router from 'vue-router'
 import Home from '@/components/Home'
 import Ad from '@/components/Ads/Ad'
@@ -11,7 +11,7 @@ import Orders from '@/components/User/Orders'
 export default new Router({
 	routes: [
 	{
-		path:"",
+		path:"/",
 		name:"home",
 		component: Home
 	},

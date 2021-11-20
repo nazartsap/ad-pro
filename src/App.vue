@@ -31,7 +31,7 @@
         </v-list-item-group>
       </v-list>
       
-  </v-navigation-drawer> 
+  </v-navigation-drawer>
   <v-app-bar app dark color="primary">
     <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
     <v-spacer></v-spacer>
@@ -44,7 +44,7 @@
     </v-toolbar-items>
   </v-app-bar>
   <v-main>
-    <router-view></router-view>> 
+    <router-view></router-view> 
   </v-main>
   </v-app>	
 </template>
