@@ -13,8 +13,7 @@
               </v-card-text>
               <v-card-actions>
                 <v-spacer></v-spacer>
-                <modal-dialog>
-                </modal-dialog>
+                <modal-dialog :ad="ad"></modal-dialog>
                 <v-btn text class="success">Buy</v-btn>
               </v-card-actions>
         </v-card>
