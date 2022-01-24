@@ -21,8 +21,22 @@
               <v-layout row>
                   <v-flex xs>
                       <v-card-text>
-                          Lorem ipsum.
-                      </v-card-text>          			
+                        <v-text-field
+                name="title" 
+                    label="Title" 
+                    type="text" 
+                    v-model="editedTitle" 
+                    >
+                </v-text-field>
+                    <v-textarea  
+                    name="desc" 
+                    label="Description" 
+                    type="text" 
+                    v-model="editedDesc"
+                    class="mb-3" 
+                    ></v-textarea>
+                </v-card-text>          
+                    
                   </v-flex>
               </v-layout>
               <v-layout row>
@@ -43,7 +57,9 @@
     export default {
         data() {
             return {
-                modal: false
+                modal: false,
+                editedTitle: "",
+                editedDesc: ""
             }
         }
     }
