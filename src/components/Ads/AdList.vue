@@ -37,9 +37,11 @@
 <script>
 export default {
 	computed: {
-		myAds(){
-			return this.$store.getters.myAds
-		}
-	}
+		myAds(state, getters) {
+	return state.ads.filter(ad => {
+			return ad.ownerId == getters.user.id
+	})       
+    }
+}
 } 
 </script>
