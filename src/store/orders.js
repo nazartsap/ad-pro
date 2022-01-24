@@ -57,6 +57,17 @@ export default {
                 commit('setLoaging',false)
                 throw error
             }
+        },
+        getters: {
+            doneOrders (state) {
+                return state.orders.filter(order => order.done)
+                },
+            undoneOrders(state) {
+                return state.orders.filter(order => !order.done)
+                },
+            orders (state, getters) {	return getters.undoneOrders.concat(getters.doneOrders)
+                }
         }
+        
     }
 }
