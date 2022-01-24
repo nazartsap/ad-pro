@@ -1,14 +1,22 @@
 <template> 
     <v-container>
         <v-layout row> 
-            <v-flex xs12 sm6 offset-sm3>
+            <v-flex xs12 sm2 offset-sm6 class="mt-5" v-if="loading">
+                <v-progress-circular 
+                    :size="70"
+                    :width="7"
+                    color="primary"
+                    indeterminate
+                ></v-progress-circular>
+            </v-flex>
+            <v-flex xs12 sm6 offset-sm3 v-else>
                 <h1 class="text--secondary mb-3 mt-3">Orders</h1>
                 <v-list
-                      subheader
-                      two-line
-                      flat
-                >		      
-                <v-list-item
+                    subheader
+                    two-line
+                    flat
+                    >
+                    <v-list-item
                 v-for="order in orders"
                 :key="order.id"
                 >
@@ -38,7 +46,7 @@
 </template>
 <script>
 export default {
-    data () { 
+    /*data () { 
         return {
             orders: [
             {
@@ -50,12 +58,25 @@ export default {
             }
             ]
         } 	
+    },*/
+  computed: {
+        loading () {
+            return this.$store.getters.loading
+        },
+        orders () {
+            return this.$store.getters.order
+        }
     },
     methods: {
         markDone(order) {
             order.done = !order.done
             console.log(order.done)
         }
+    },
+    created () {
+        this.$store.dispatch('fetchOtders')
     }
 } 
 </script>
+
+
