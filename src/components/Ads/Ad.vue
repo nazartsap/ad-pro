@@ -15,6 +15,7 @@
                 <v-spacer></v-spacer>
                 <modal-dialog :ad="ad" v-if="isOwner">
                 </modal-dialog>
+                <app-vue-modal :ad="ad"></app-vue-modal>
                 <v-btn text class="success">Buy</v-btn>
               </v-card-actions>
         </v-card>
